@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+	display: block;
 	background: url(map/1.gif);
 	overflow: hidden;
 	z-index: 10;
@@ -114,7 +115,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	background: url(map/1.gif);
+	background: url(map/10.gif);
 	display: none;
 	overflow: hidden;
 	z-index: 1;
@@ -126,7 +127,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	background: url(map/1.gif);
+	background: url(map/11.gif);
 	display: none;
 	overflow: hidden;
 	z-index: 0;
