@@ -123,6 +123,7 @@ function processWalk(dir) {
     topObs = parseInt(topObs);
     leftObs = parseInt(leftObs);
 
+    //map1(bot) to map3
     if(top >= 550 && top <= 580 && currentRoom == 1){
     currentRoom = 3;
     $("#character").remove();
@@ -134,8 +135,9 @@ function processWalk(dir) {
 
     $('#character').addClass('front-stand'); 
     });
-    
   }
+
+  //map1(right) to map2
   if(left >= 850 && left <= 880 && currentRoom == 1){
     currentRoom = 2;
     $("#character").remove();
@@ -145,11 +147,12 @@ function processWalk(dir) {
     $("#character").css("left", "35px","top",top);
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
-    
   }
-    if(left >= 0 && left <= 30 && currentRoom == 1){
+
+  //map1(left) to map7
+  if(left >= 0 && left <= 30 && currentRoom == 1){
     currentRoom = 7;
     $("#character").remove();
     $("#map1").hide();
@@ -158,10 +161,26 @@ function processWalk(dir) {
     $("#character").css("left", "835px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('left-stand'); 
     });
-    
   }
+
+
+ //map2(left) to map1
+  if(left >= 0 && left <= 30 && currentRoom == 2){
+    currentRoom = 1;
+    $("#character").remove();
+    $("#map2").hide();
+    $("#map1").show();
+    $("#map1").append("<div id='character'></div>");
+    $("#character").css("left", "835px");
+    $(document).ready(function() {
+
+    $('#character').addClass('left-stand'); 
+    });
+  }
+
+  //map2(bot) to map6
   if(top >= 550 && top <= 580 && currentRoom == 2){
     currentRoom = 6;
     $("#character").remove();
@@ -173,8 +192,9 @@ function processWalk(dir) {
 
     $('#character').addClass('front-stand'); 
     });
-    
   }
+
+  //map2(top) to map5
   if(top >= 0 && top <= 30 && currentRoom == 2){
     currentRoom = 5;
     $("#character").remove();
@@ -184,10 +204,11 @@ function processWalk(dir) {
     $("#character").css("top", "530px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('back-stand'); 
     });
-    
   }
+
+  //map3(top) to map1
   if(top >= 0 && top <= 30 && currentRoom == 3){
     currentRoom = 1;
     $("#character").remove();
@@ -197,10 +218,11 @@ function processWalk(dir) {
     $("#character").css("top", "530px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
-    });
-    
+    $('#character').addClass('back-stand'); 
+    });  
   }
+
+  //map3(left) to map4
   if(left >= 0 && left <= 30 && currentRoom == 3){
     currentRoom = 4;
     $("#character").remove();
@@ -210,10 +232,11 @@ function processWalk(dir) {
     $("#character").css("left", "835px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('left-stand'); 
     });
-    
   }
+
+  //map3(right) to map6
   if(left >= 850 && left <= 880 && currentRoom == 3){
     currentRoom = 6;
     $("#character").remove();
@@ -223,10 +246,11 @@ function processWalk(dir) {
     $("#character").css("left", "35px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
-    
   }
+
+  //map4(right) to map3
   if(left >= 850 && left <= 880 && currentRoom == 4){
     currentRoom = 3;
     $("#character").remove();
@@ -236,10 +260,11 @@ function processWalk(dir) {
     $("#character").css("left", "35px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
-    
   }
+
+  //map4(bot) to map9
   if(top >= 550 && top <= 580 && currentRoom == 4){
     currentRoom = 9;
     $("#character").remove();
@@ -251,8 +276,67 @@ function processWalk(dir) {
 
     $('#character').addClass('front-stand'); 
     });
-    
   }
+
+
+  //map4(top) to map7 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  if(top >= 0 && top <= 30 && currentRoom == 4){
+    currentRoom = 7;
+    $("#character").remove();
+    $("#map4").hide();
+    $("#map7").show();
+    $("#map7").append("<div id='character'></div>");
+    $("#character").css("top", "530px");
+    $(document).ready(function() {
+
+    $('#character').addClass('back-stand'); 
+    });
+  }
+
+  //map5(bot) to map2
+  if(top >= 550 && top <= 580 && currentRoom == 5){
+    currentRoom = 2;
+    $("#character").remove();
+    $("#map5").hide();
+    $("#map2").show();
+    $("#map2").append("<div id='character'></div>");
+    $("#character").css("top", "40px");
+    $(document).ready(function() {
+
+    $('#character').addClass('front-stand'); 
+    });
+  }
+
+  //map6(top) to map2
+  if(top >= 0 && top <= 30 && currentRoom == 6){
+    currentRoom = 2;
+    $("#character").remove();
+    $("#map6").hide();
+    $("#map2").show();
+    $("#map2").append("<div id='character'></div>");
+    $("#character").css("top", "530px");
+    $(document).ready(function() {
+
+    $('#character').addClass('back-stand'); 
+    });
+  }
+
+  //map6(left) to map3
+  if(left >= 0 && left <= 30 && currentRoom == 6){
+    currentRoom = 3;
+    $("#character").remove();
+    $("#map6").hide();
+    $("#map3").show();
+    $("#map3").append("<div id='character'></div>");
+    $("#character").css("left", "835px");
+    $(document).ready(function() {
+
+    $('#character').addClass('left-stand'); 
+    });
+  }
+
+
+  //map7(right) to map1
   if(left >= 850 && left <= 880 && currentRoom == 7){
     currentRoom = 1;
     $("#character").remove();
@@ -262,10 +346,11 @@ function processWalk(dir) {
     $("#character").css("left", "35px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
   }
 
+  //map7(top) to map8
   if(top >= 0 && top <= 30 && currentRoom == 7){
     currentRoom = 8;
     $("#character").remove();
@@ -275,11 +360,12 @@ function processWalk(dir) {
     $("#character").css("top", "530px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('back-stand'); 
     });
-    
   }
 
+
+  //map7(bot) to map4
   if(top >= 550 && top <= 580 && currentRoom == 7){
     currentRoom = 4;
     $("#character").remove();
@@ -291,8 +377,9 @@ function processWalk(dir) {
 
     $('#character').addClass('front-stand'); 
     });
-    
   }
+
+  //map8(bot) to map7
   if(top >= 550 && top <= 580 && currentRoom == 8){
     currentRoom = 7;
     $("#character").remove();
@@ -304,21 +391,23 @@ function processWalk(dir) {
 
     $('#character').addClass('front-stand'); 
     });
-    
   }
+
+  //map9(top) to map4
   if(top >= 0 && top <= 30 && currentRoom == 9){
     currentRoom = 4;
     $("#character").remove();
     $("#map9").hide();
     $("#map4").show();
     $("#map4").append("<div id='character'></div>");
-    $("#character").css("left", "530px");
+    $("#character").css("top", "530px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('back-stand'); 
     });
-    
   }
+  
+   //map9(right) to map10 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   if(left >= 850 && left <= 880 && currentRoom == 9){
     currentRoom = 10;
     $("#character").remove();
@@ -328,10 +417,11 @@ function processWalk(dir) {
     $("#character").css("left", "40px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
-    
   }
+
+  //map10(left) to map9
   if(left >= 0 && left <= 30 && currentRoom == 10){
     currentRoom = 9;
     $("#character").remove();
@@ -341,10 +431,12 @@ function processWalk(dir) {
     $("#character").css("left", "835px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('left-stand'); 
     });
-    
   }
+
+
+  //map10(right) to map11
   if(left >= 850 && left <= 880 && currentRoom == 10){
     currentRoom = 11;
     $("#character").remove();
@@ -354,23 +446,25 @@ function processWalk(dir) {
     $("#character").css("left", "40px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('right-stand'); 
     });
-    
   }
+
+  //map11(left) to map10
   if(left >= 0 && left <= 30 && currentRoom == 11){
-    currentRoom = 11;
+    currentRoom = 10;
     $("#character").remove();
-    $("#map10").hide();
-    $("#map11").show();
-    $("#map11").append("<div id='character'></div>");
+    $("#map11").hide();
+    $("#map10").show();
+    $("#map10").append("<div id='character'></div>");
     $("#character").css("left", "835px");
     $(document).ready(function() {
 
-    $('#character').addClass('front-stand'); 
+    $('#character').addClass('left-stand'); 
     });
-    
   }
+
+
     if(left <= leftObs && top <= topObs && left >= leftObs + 57 && top >= topObs + 37){
     }
     console.log("room " + parseInt(currentRoom));
