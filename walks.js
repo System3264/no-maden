@@ -2,7 +2,7 @@
 var currentKey;          //records the current key pressed
 var TimerWalk;          //timer handle
 var charStep = 2;       //1=1st foot, 2=stand, 3=2nd foot, 4=stand
-var charSpeed = 400; //how fast the character will move
+var charSpeed = 370; //how fast the character will move
 var currentRoom = 1; //room
 
 //Once the DOM is ready, set the character to facing forward (default position)
@@ -126,11 +126,13 @@ function processWalk(dir) {
     //map1(bot) to map3
     if(top >= 550 && top <= 580 && currentRoom == 1){
     currentRoom = 3;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map1").hide();
     $("#map3").show();
     $("#map3").append("<div id='character'></div>");
     $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -140,11 +142,13 @@ function processWalk(dir) {
   //map1(right) to map2
   if(left >= 850 && left <= 880 && currentRoom == 1){
     currentRoom = 2;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map1").hide();
     $("#map2").show();
     $("#map2").append("<div id='character'></div>");
-    $("#character").css("left", "35px","top",top);
+    $("#character").css("left", "35px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('right-stand'); 
@@ -154,11 +158,13 @@ function processWalk(dir) {
   //map1(left) to map7
   if(left >= 0 && left <= 30 && currentRoom == 1){
     currentRoom = 7;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map1").hide();
     $("#map7").show();
     $("#map7").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
@@ -169,11 +175,13 @@ function processWalk(dir) {
  //map2(left) to map1
   if(left >= 0 && left <= 30 && currentRoom == 2){
     currentRoom = 1;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map2").hide();
     $("#map1").show();
     $("#map1").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
@@ -183,11 +191,13 @@ function processWalk(dir) {
   //map2(bot) to map6
   if(top >= 550 && top <= 580 && currentRoom == 2){
     currentRoom = 6;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map2").hide();
     $("#map6").show();
     $("#map6").append("<div id='character'></div>");
-    $("#character").css("top", "40px","left","835px");
+    $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -197,11 +207,13 @@ function processWalk(dir) {
   //map2(top) to map5
   if(top >= 0 && top <= 30 && currentRoom == 2){
     currentRoom = 5;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map2").hide();
     $("#map5").show();
     $("#map5").append("<div id='character'></div>");
     $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('back-stand'); 
@@ -211,11 +223,13 @@ function processWalk(dir) {
   //map3(top) to map1
   if(top >= 0 && top <= 30 && currentRoom == 3){
     currentRoom = 1;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map3").hide();
     $("#map1").show();
     $("#map1").append("<div id='character'></div>");
     $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('back-stand'); 
@@ -225,11 +239,13 @@ function processWalk(dir) {
   //map3(left) to map4
   if(left >= 0 && left <= 30 && currentRoom == 3){
     currentRoom = 4;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map3").hide();
     $("#map4").show();
     $("#map4").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
@@ -239,11 +255,13 @@ function processWalk(dir) {
   //map3(right) to map6
   if(left >= 850 && left <= 880 && currentRoom == 3){
     currentRoom = 6;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map3").hide();
     $("#map6").show();
     $("#map6").append("<div id='character'></div>");
     $("#character").css("left", "35px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('right-stand'); 
@@ -253,11 +271,13 @@ function processWalk(dir) {
   //map4(right) to map3
   if(left >= 850 && left <= 880 && currentRoom == 4){
     currentRoom = 3;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map4").hide();
     $("#map3").show();
     $("#map3").append("<div id='character'></div>");
     $("#character").css("left", "35px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('right-stand'); 
@@ -267,11 +287,13 @@ function processWalk(dir) {
   //map4(bot) to map9
   if(top >= 550 && top <= 580 && currentRoom == 4){
     currentRoom = 9;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map4").hide();
     $("#map9").show();
     $("#map9").append("<div id='character'></div>");
     $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -279,28 +301,16 @@ function processWalk(dir) {
   }
 
 
-  //map4(top) to map7 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  if(top >= 0 && top <= 30 && currentRoom == 4){
-    currentRoom = 7;
-    $("#character").remove();
-    $("#map4").hide();
-    $("#map7").show();
-    $("#map7").append("<div id='character'></div>");
-    $("#character").css("top", "530px");
-    $(document).ready(function() {
-
-    $('#character').addClass('back-stand'); 
-    });
-  }
-
   //map5(bot) to map2
   if(top >= 550 && top <= 580 && currentRoom == 5){
     currentRoom = 2;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map5").hide();
     $("#map2").show();
     $("#map2").append("<div id='character'></div>");
     $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -310,11 +320,13 @@ function processWalk(dir) {
   //map6(top) to map2
   if(top >= 0 && top <= 30 && currentRoom == 6){
     currentRoom = 2;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map6").hide();
     $("#map2").show();
     $("#map2").append("<div id='character'></div>");
     $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('back-stand'); 
@@ -324,11 +336,13 @@ function processWalk(dir) {
   //map6(left) to map3
   if(left >= 0 && left <= 30 && currentRoom == 6){
     currentRoom = 3;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map6").hide();
     $("#map3").show();
     $("#map3").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
@@ -339,11 +353,13 @@ function processWalk(dir) {
   //map7(right) to map1
   if(left >= 850 && left <= 880 && currentRoom == 7){
     currentRoom = 1;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map7").hide();
     $("#map1").show();
     $("#map1").append("<div id='character'></div>");
     $("#character").css("left", "35px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('right-stand'); 
@@ -353,11 +369,13 @@ function processWalk(dir) {
   //map7(top) to map8
   if(top >= 0 && top <= 30 && currentRoom == 7){
     currentRoom = 8;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map7").hide();
     $("#map8").show();
     $("#map8").append("<div id='character'></div>");
     $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('back-stand'); 
@@ -365,14 +383,34 @@ function processWalk(dir) {
   }
 
 
+  //map4(top) to map7
+  if(top >= 0 && top <= 30 && currentRoom == 4){
+    currentRoom = 7;
+    var leftcurrent = $("#character").css("left");
+    $("#character").remove();
+    $("#map4").hide();
+    $("#map7").show();
+    $("#map7").append("<div id='character'></div>");
+    $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
+    $(document).ready(function() {
+
+    $('#character').addClass('back-stand'); 
+    });
+  }
+
+
+
   //map7(bot) to map4
   if(top >= 550 && top <= 580 && currentRoom == 7){
     currentRoom = 4;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map7").hide();
     $("#map4").show();
     $("#map4").append("<div id='character'></div>");
     $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -382,11 +420,13 @@ function processWalk(dir) {
   //map8(bot) to map7
   if(top >= 550 && top <= 580 && currentRoom == 8){
     currentRoom = 7;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map8").hide();
     $("#map7").show();
     $("#map7").append("<div id='character'></div>");
     $("#character").css("top", "40px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('front-stand'); 
@@ -396,39 +436,31 @@ function processWalk(dir) {
   //map9(top) to map4
   if(top >= 0 && top <= 30 && currentRoom == 9){
     currentRoom = 4;
+    var leftcurrent = $("#character").css("left");
     $("#character").remove();
     $("#map9").hide();
     $("#map4").show();
     $("#map4").append("<div id='character'></div>");
     $("#character").css("top", "530px");
+    $("#character").css("left", leftcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('back-stand'); 
     });
   }
   
-   //map9(right) to map10 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  if(left >= 850 && left <= 880 && currentRoom == 9){
-    currentRoom = 10;
-    $("#character").remove();
-    $("#map9").hide();
-    $("#map10").show();
-    $("#map10").append("<div id='character'></div>");
-    $("#character").css("left", "40px");
-    $(document).ready(function() {
 
-    $('#character').addClass('right-stand'); 
-    });
-  }
 
   //map10(left) to map9
   if(left >= 0 && left <= 30 && currentRoom == 10){
     currentRoom = 9;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map10").hide();
     $("#map9").show();
     $("#map9").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
@@ -439,11 +471,29 @@ function processWalk(dir) {
   //map10(right) to map11
   if(left >= 850 && left <= 880 && currentRoom == 10){
     currentRoom = 11;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map10").hide();
     $("#map11").show();
     $("#map11").append("<div id='character'></div>");
     $("#character").css("left", "40px");
+    $("#character").css("top", topcurrent);
+    $(document).ready(function() {
+
+    $('#character').addClass('right-stand'); 
+    });
+  }
+
+     //map9(right) to map10
+  if(left >= 850 && left <= 880 && currentRoom == 9){
+    currentRoom = 10;
+    var topcurrent = $("#character").css("top");
+    $("#character").remove();
+    $("#map9").hide();
+    $("#map10").show();
+    $("#map10").append("<div id='character'></div>");
+    $("#character").css("left", "40px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('right-stand'); 
@@ -453,11 +503,13 @@ function processWalk(dir) {
   //map11(left) to map10
   if(left >= 0 && left <= 30 && currentRoom == 11){
     currentRoom = 10;
+    var topcurrent = $("#character").css("top");
     $("#character").remove();
     $("#map11").hide();
     $("#map10").show();
     $("#map10").append("<div id='character'></div>");
     $("#character").css("left", "835px");
+    $("#character").css("top", topcurrent);
     $(document).ready(function() {
 
     $('#character').addClass('left-stand'); 
