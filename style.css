@@ -132,10 +132,26 @@
 	overflow: hidden;
 	z-index: 0;
 }
+/*Game Over Screen*/
+#gameover{
+	width: 900px;
+	width: 900px;
+	height: 600px;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	background: url(map/11.gif);
+	display: none;
+	overflow: hidden;
+	z-index : -2;
+}
+/*obstacle*/
 .obs{
 	position: absolute;
 	z-index: 400;
 }
+
 /*features*/
 .bonfire-rad{
 	width: 80px;
@@ -155,24 +171,24 @@
 }
 /*items*/
 .kayu {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 	left: 130px;
 	top: 280px;
 	background: url(items/kayu.png);
 	background-size: 100%;
 }
 .apple {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 	left: 130px;
 	top: 280px;
 	background: url(items/apel.png);
 	background-size: 100%;
 }
 .grape {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 	left: 130px;
 	top: 280px;
 	background: url(items/anggur.png);
@@ -244,9 +260,23 @@
 	  background: url('character.png') no-repeat;
 	  z-index: 300;
 }
+/*Status area*/
+#status-box{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#status{
+	position: relative;
+	bottom: 0;
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+}
 
-
-
+#status span + #status p{
+	display: inline;
+}
 
 
 
