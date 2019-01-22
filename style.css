@@ -214,42 +214,6 @@
 	background: url(obs/bould1.png);
 	background-size: 100%;
 }
-}
-
-
-#rightside04 {
-	position: absolute;
-	width: 25px;
-	height: 600px;
-	opacity: 0;
-	right: 0;
-}
-
-#leftside05 {
-	position: absolute;
-	width: 25px;
-	height: 600px;
-	opacity: 1;
-}
-
-#botside05 {
-	position: absolute;
-	width: 900px;
-	height: 25px;
-	opacity: 0;
-	bottom: 0;
-}
-
-#topside08 {
-	position: absolute;
-	width: 900px;
-	height: 25px;
-	opacity: 0;
-	top: 0;
-}
-
-
-
 
 #character {
 	 position: absolute;
@@ -262,9 +226,17 @@
 }
 /*Status area*/
 #status-box{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
-	width: 100%;
+	width: 110px;
+	z-index: 400;
+	left: 79px;
+	top: 0;
+
+}
+
+.progress{
+	width: 100px;
 }
 #status{
 	position: relative;
