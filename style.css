@@ -170,14 +170,27 @@
 	background-size: 100%;
 }
 /*items*/
+/*Collectable*/
 .kayu {
 	width: 24px;
 	height: 24px;
-	left: 130px;
-	top: 280px;
 	background: url(items/kayu.png);
 	background-size: 100%;
 }
+.batu{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.liat{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+
+/*Consumable*/
 .apple {
 	width: 24px;
 	height: 24px;
@@ -241,7 +254,9 @@
 #status{
 	position: relative;
 	bottom: 0;
-	width: 900px;
+	width: auto
+
+	;
 	height: auto;
 	margin: 0 auto;
 }

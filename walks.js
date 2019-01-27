@@ -4,38 +4,18 @@ var TimerWalk;          //timer handle
 var charStep = 2;       //1=1st foot, 2=stand, 3=2nd foot, 4=stand
 var charSpeed = 370; //how fast the character will move
 var currentRoom = 1; //room
-var charPick; //pick item
 
-    //position character
-    var top = $("#character").offset().top;
-    var left = $("#character").offset().left;
-
-    top = parseInt(top);
-    left = parseInt(left);
-
-    //position obsstacle
-    var topObs = $(".obs").offset().top;
-    var leftObs = $(".obs").offset().left;
-
-    topObs = parseInt(topObs);
-    leftObs = parseInt(leftObs);
-    
-    var item  = $(".item");
-    //position item
-    var topItem_rad = $(".item").offset().top;
-    var leftItem_rad = $(".item").offset().left;
-
-    topItem_rad = parseInt(topItem_rad);
-    leftItem_rad = parseInt(leftItem_rad);
-    
-  var topDiff = $("#character").css("top");
-  var leftDiff = $("#character").css("left");
+var i = 0; //loop counter
 
 //Once the DOM is ready, set the character to facing forward (default position)
 $(document).ready(function() {
 
 //add character state class
 $('#character').addClass('front-stand'); 
+function play(){
+  charaStatusPlay();
+}
+
 
 });
 
@@ -53,15 +33,12 @@ $(document).keydown(function(e) {
       case 39: charWalk('right'); break;
       case 40: charWalk('down');  break;
       case 37: charWalk('left');  break;
-      case 32:
-        {
-          var jmlhkayu =+ 1;
-          console.log("kayu +1");
-          $(".item").remove();
-      }
+    }
+    //pick item
+    switch(e.keyCode) {
+      case 32: pickItem(currentRoom);
       break;
     }
-
   }
 
 });
@@ -157,16 +134,14 @@ staminaPlay();
 
     topObs = parseInt(topObs);
     leftObs = parseInt(leftObs);
-
-    topDiff  = parseInt(topDiff);
-    leftDiff = parseInt(leftDiff);
-
-    var topTemp = top;
-    var leftTemp = left;
-
-    topDiff = topDiff-top;
-    leftDiff = leftDiff-left;
  
+$("#map"+currentRoom).ready(function(){
+  if ($("div").hasClass("item") == true)
+  {
+
+  }
+});
+
     //map1(bot) to map3
     if(top >= 550 && top <= 580 && currentRoom == 1){
     currentRoom = 3;
@@ -559,20 +534,25 @@ staminaPlay();
     $('#character').addClass('left-stand'); 
     });
   }
-
-  topDiff = top - topDiff;
-  leftDiff = left - leftDiff;
-
-  if(left <= leftObs && top <= topObs && left >= leftObs + 57 && top >= topObs + 37){
-    function processWalk(dir){};
-
-    }
-
     console.log("room " + parseInt(currentRoom));
     console.log("top " + top);
     console.log("left " + left);
-    console.log("Difference Top  " + topDiff);
-    console.log("Difference Left " + leftDiff);
+    console.log("step " + charStep);
+
+    //tend feature
+    if(left >= 630 && top >= 75 && left <= 730 && top <= 220 == currentRoom == 1)
+    {
+      function tend(){
+      var stHealTime;
+      stHealTime = setTimeout(function(){tend()}, 1000)
+      st += 20;
+      }
+    }
+    else
+    {
+      st += 2;
+    }
+
 }
 
 //Time for stamina integration
@@ -586,7 +566,7 @@ if (charStep == 1){
 
 if(st <= 0){
   st = 0;
-  charSpeed=1200;
+  charSpeed=540000;
 }
 
 if(st <= 0){
@@ -595,15 +575,17 @@ if(st <= 0){
 if(st >0){
   charSpeed=370;
 }
+
+function itemSpawn(){
+  if(Time % 7 == 0){
+    $("#map"+currentRoom+"").append($('div class="item '+item+'"'))
+  }
 }
-    
-  
+}
 
-
-
-
-function pickItems(){
-      var jmlhkayu =+ 1;
-      console.log("kayu +1");
-      $(".kayu").remove();
+//Game Over
+function gameOver(){
+  clearTimeout();
+  clearTimeout(character);
+  alert("Inallilahi");
 }

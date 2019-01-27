@@ -1,36 +1,39 @@
-
-$(".kayu").keydown(function(e){
-
-  if((left >= 130 && left <= 180) && (top >=280 && top <=330) && $(this).keypress(!currentKey)){
-    currentKey = e.keyCode;
-
-    switch(e.keyCode) {
-      case 32: 
-      var jmlhkayu =+ 1;
-      console.log("kayu +1");
-      $(".kayu").remove();
-      break;
-    } 
-  }else{
-   // alert("Belum sampe.");
-   console.log("belum sampe");
-  }
-});
-
-$(document).keyup(function(e) {
-
-  //don't stop the walk if the player is pushing other buttons
-  //only stop the walk if the key that started the walk is released
-  if (e.keyCode == currentKey) {
-
-    //set the currentKey to false, this will enable a new key to be pressed
-    currentKey = false;
-
-    //clear the walk timer
-    clearInterval(TimerWalk);
-
-    //finish the character's movement
-    $('#character').stop(true, false);
-  }
-});
-
+function pickItem(){
+      var mapping = $("#map"+currentRoom+"");
+      if(mapping.hasClass("kayu"))
+      {
+      var hitKayu = parent.getElementsByClassName("kayu").length;
+      for (i = 0; i < hitKayu; i++) {
+        var kayu =+ 1;
+        console.log("kayu +"+kayu+"");
+        $(".kayu:nth-child"+i+"").remove();
+        }
+      }
+      else if (mapping.hasClass("batu"))
+      {
+      var hitBatu = parent.getElementsByClassName("batu").length;
+      for (i = 0; i < hitBatu; i++) {
+        var batu =+ 1;
+        console.log("batu +1");
+        $(".batu:nth-child"+i+"").remove();
+      }
+      }
+      else if (mapping.hasClass("liat"))
+      {
+      var hitLiat = parent.getElementsByClassName("liat").length;
+      for (i = 0; i < hitLiat; i++) {
+        var liat =+ 1;
+        console.log("liat +1");
+        $(".liat:nth-child"+i+"").remove();
+      }
+      }
+      else if (mapping.hasClass("vine"))
+      {
+      var hitVine = parent.getElementsByClassName("vine").length;
+      for (i = 0; i < hitVine; i++) {
+        var vine =+ 1;
+        console.log("vine +1");
+        $(".vine:nth-child"+i+"").remove();
+      }
+      }
+    }

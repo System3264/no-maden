@@ -1,4 +1,3 @@
-
 var hp = 100; //Health Point
 var st = 100; //Stamina
 var hg = 100; //Hunger point
@@ -10,18 +9,12 @@ var charStep = 2;
 charaStatusPlay();
 function charaStatusPlay()
 {
-	timePlay();
-	status();
+  timePlay();
+  status();
 
 
 }
 
-//Game Over
-function gameOver(){
-  clearTimeout();
-  clearTimeout(character);
-  alert("Inallilahi");
-}
 
 function status(){
   charaTime = Time;
@@ -39,15 +32,15 @@ function timePlay() {
   hg = hg;
   st += 2;
   status();
-  Time = setTimeout(function(){timePlay()}, 3000);
+  Time = setTimeout(function(){timePlay()}, 5000);
   console.log("Time " + Time + " Hunger " + hg + " Health Point " + hp);
   
   document.getElementById("healthbar").innerHTML = hp;
-	$("#healthbar").css("width", hp);
+  $("#healthbar").css("width", hp);
   document.getElementById("hungerbar").innerHTML = hg;
-	$("#hungerbar").css("width", hg);
+  $("#hungerbar").css("width", hg);
   document.getElementById("staminabar").innerHTML = st;
-	$("#staminabar").css("width", st);
+  $("#staminabar").css("width", st);
 
 
   hg = hg - 5;
@@ -57,11 +50,13 @@ function timePlay() {
     hp -= 5;
   }
 
-  if (hp <= -10){
+  if (hp <= 20)
+  {
+    $("#healthbar").switchClass("bg-success","bg-danger", hp ,"easeInOutQuad");
+  }
+  else if (hp <= -10){
 
     gameOver();
-
-
   }
 }
 
