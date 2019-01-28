@@ -36,7 +36,7 @@ $(document).keydown(function(e) {
     }
     //pick item
     switch(e.keyCode) {
-      case 32: pickItem(currentRoom);
+      case 32: setInterval(pickItem(), 200);
       break;
     }
   }
@@ -534,26 +534,26 @@ $("#map"+currentRoom).ready(function(){
     $('#character').addClass('left-stand'); 
     });
   }
+  //tend feature map 1
+  if(left >= 630 && top >= 75 && left <= 700 && top <= 250 && currentRoom == 1)
+  {
+     st += 20;
+     if (st >= 100)
+      {st = 100};
+  }
+  if(left <= 630 && top <= 75 && left >= 700 && top >= 250 && currentRoom == 1)
+  {
+     timePlay();
+  }
+
+
     console.log("room " + parseInt(currentRoom));
     console.log("top " + top);
     console.log("left " + left);
     console.log("step " + charStep);
 
-    //tend feature
-    if(left >= 630 && top >= 75 && left <= 730 && top <= 220 == currentRoom == 1)
-    {
-      function tend(){
-      var stHealTime;
-      stHealTime = setTimeout(function(){tend()}, 1000)
-      st += 20;
-      }
-    }
-    else
-    {
-      st += 2;
-    }
-
 }
+
 
 //Time for stamina integration
 function staminaPlay(){
@@ -575,17 +575,9 @@ if(st <= 0){
 if(st >0){
   charSpeed=370;
 }
-
+}
 function itemSpawn(){
   if(Time % 7 == 0){
     $("#map"+currentRoom+"").append($('div class="item '+item+'"'))
   }
-}
-}
-
-//Game Over
-function gameOver(){
-  clearTimeout();
-  clearTimeout(character);
-  alert("Inallilahi");
 }
