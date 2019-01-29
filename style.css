@@ -177,6 +177,82 @@
 	background: url(items/kayu.png);
 	background-size: 100%;
 }
+.kayu01 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+.kayu02 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+.kayu03 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu04 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu05 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu06 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu07 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu08 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu09 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu10 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu11 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+
 .batu{
 	width: 24px;
 	height: 24px;
@@ -189,6 +265,73 @@
 	background: url(items/liat.png);
 	background-size: 100%;
 }
+.liat01{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat02{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat03{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat04{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat05{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat06{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat07{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat08{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat09{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat10{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat11{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+
 
 /*Consumable*/
 .apple {
@@ -199,6 +342,97 @@
 	background: url(items/apel.png);
 	background-size: 100%;
 }
+.apple01 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple02 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple03 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple04 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple05 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple06 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple07 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple08 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple09 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple10 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple11 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+
+
+
 .grape {
 	width: 24px;
 	height: 24px;
