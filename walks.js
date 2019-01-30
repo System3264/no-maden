@@ -39,6 +39,14 @@ $(document).keydown(function(e) {
       case 32: setInterval(pickItem(), 200);
       break;
     }
+     switch(e.keyCode) {
+      case 90: setInterval(storeitem(), 200);
+      break;
+    }
+      switch(e.keyCode) {
+      case 88: setInterval(takeoutitem(), 200);
+      break;
+    }
   }
 
 });

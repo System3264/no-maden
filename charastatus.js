@@ -6,7 +6,7 @@ var Time = 0;
 var Walk = 0;
 var charStep = 2; 
 
-charaStatusPlay();
+
 function charaStatusPlay()
 {
   timePlay();
@@ -54,9 +54,16 @@ function timePlay() {
   {
     $("#healthbar").switchClass("bg-success","bg-danger", hp ,"easeInOutQuad");
   }
-  else if (hp <= -10){
+  if (hp == 0){
 
     gameOver();
   }
 }
 
+function gameOver(){
+  console.log("Game Over");
+  $("#gameover").css("display","block");
+  alert("inallilahi");
+  
+
+}

@@ -1,3 +1,19 @@
+#menuscreen{
+	width: 900px;
+	height: 600px;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	background: url(menu.gif);
+	overflow: hidden;
+	display: block;
+	z-index: 10;
+}
+
+
+
+
 
 #map1 {
 	width: 900px;
@@ -6,7 +22,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	display: block;
+	display: none;
 	background: url(map/1.gif);
 	overflow: hidden;
 	z-index: 10;
@@ -141,10 +157,10 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	background: url(map/11.gif);
+	background: url(map/gameover.png);
 	display: none;
 	overflow: hidden;
-	z-index : -2;
+	z-index : 900;
 }
 /*obstacle*/
 .obs{
@@ -177,7 +193,149 @@
 	background: url(items/kayu.png);
 	background-size: 100%;
 }
+.kayu01 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+.kayu02 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+.kayu03 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu04 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu05 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu06 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu07 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu08 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu09 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu10 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+.kayu11 {
+	width: 24px;
+	height: 24px;
+	background: url(items/kayu.png);
+	background-size: 100%;
+}
+
+
 .batu{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu01{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu02{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu03{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu04{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu05{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu06{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu07{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu08{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu09{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu10{
+	width: 24px;
+	height: 24px;
+	background: url(items/batu.png);
+	background-size: 100%;	
+}
+.batu11{
 	width: 24px;
 	height: 24px;
 	background: url(items/batu.png);
@@ -189,6 +347,73 @@
 	background: url(items/liat.png);
 	background-size: 100%;
 }
+.liat01{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat02{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat03{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat04{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat05{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat06{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat07{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat08{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat09{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat10{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+.liat11{
+	width: 24px;
+	height: 24px;
+	background: url(items/liat.png);
+	background-size: 100%;
+}
+
 
 /*Consumable*/
 .apple {
@@ -199,6 +424,97 @@
 	background: url(items/apel.png);
 	background-size: 100%;
 }
+.apple01 {
+	width: 24px;
+	height: 24px;
+	left: 117px;
+	top: 72px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple02 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 280px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple03 {
+	width: 24px;
+	height: 24px;
+	left: 189px;
+	top: 305px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple04 {
+	width: 24px;
+	height: 24px;
+	left: 173px;
+	top: 325px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple05 {
+	width: 24px;
+	height: 24px;
+	left: 533px;
+	top: 420px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple06 {
+	width: 24px;
+	height: 24px;
+	left: 760px;
+	top: 345px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple07 {
+	width: 24px;
+	height: 24px;
+	left: 443px;
+	top: 524px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple08 {
+	width: 24px;
+	height: 24px;
+	left: 776px;
+	top: 254px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple09 {
+	width: 24px;
+	height: 24px;
+	left: 130px;
+	top: 246px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple10 {
+	width: 24px;
+	height: 24px;
+	left: 654px;
+	top: 243px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+.apple11 {
+	width: 24px;
+	height: 24px;
+	left: 135px;
+	top: 332px;
+	background: url(items/apel.png);
+	background-size: 100%;
+}
+
+
+
 .grape {
 	width: 24px;
 	height: 24px;
@@ -245,6 +561,7 @@
 	z-index: 400;
 	left: 79px;
 	top: 0;
+	display: none;
 
 }
 
@@ -266,8 +583,44 @@
 }
 
 
+#monster {
+	 position: absolute;
+	  top: 380px;
+	  left: 450px;
+	  width: 60px;
+	  height: 60px;
+	  background: url('monster/monster.png') no-repeat;
+	  z-index: 300;
+}
 
+div.monster{
+	background: url(monster/monster.png);
+	width: 60px;
+	height: 60px;
+	z-index: 400;
+	position: absolute;
+	left: 100px;
+	top: 500px;
+}
 
+#itemCheck{
+
+	position: fixed;
+	bottom: 20px;
+	width: 110px;
+	z-index: 400;
+	left: 79px;
+	top: 230px;
+}
+
+.storage{
+	background: url(feature/storage.png);
+		position: absolute;
+	  top: 160px;
+	  left: 400px;
+	  width: 100px;
+	  height: 100px;
+}
 
 
 #character.front-right { background-position: 0px 0px; }
