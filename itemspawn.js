@@ -9,7 +9,7 @@ var timer=0;
 
 
 
-
+// function for spawin item (Still bugging)
 function itemSpawnPlay(){
 
 	 itemTimeSpawn = setTimeout(function(){itemSpawnPlay()}, 5000);
@@ -315,7 +315,7 @@ function itemSpawnPlay(){
 
 	 	}
 	 	if(chance==3){ 
-	 		$("#map11").append("<div class='obs item liat liat11'></div");
+	 		$("#map11").append("<div class='obs item liat liat11'></div>");
 		 	$('.liat11').css("top", newq[0]);
 		 	$('.liat11').css("left", newq[1]);
 	 	console.log("nh" + newq[0] + "nw" + newq[1]);

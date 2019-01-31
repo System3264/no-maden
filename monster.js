@@ -27,15 +27,16 @@ var left = $("#character").css("left");
 
     $('.monster').animate({top: newq[0], left: newq[1]},1000, function(){
         animateDiv();
-        if (currentRoom==3 && (top < (newq[0] + 60) && (top + 32) > newq[0]) && (left < (newq[1] + 60) && (left+ 32) > newq[1])) 
+    if (currentRoom==3 && (top < (newq[0] + 60) && (top + 32) > newq[0]) && (left < (newq[1] + 60) && (left+ 32) > newq[1])) 
 {
+    
     // collision detected!
     hp -= 10;
-    $('.monster').css("background", "url(monster/monsterhit.png)");
+    $('.monster').css("background", "url(monster/bootrig.gif)");
     console.log("berahsil");
 }
 else{
-    $('.monster').css("background", "url(monster/monster.png)");
+    $('.monster').css("background", "url(monster/boo.gif)");
 }
 
 

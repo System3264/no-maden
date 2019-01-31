@@ -11,11 +11,9 @@ function charaStatusPlay()
 {
   timePlay();
   status();
-
-
 }
 
-
+//status base
 function status(){
   charaTime = Time;
   if(hg >= 100){hg = 100;}
@@ -24,7 +22,7 @@ function status(){
   if(hg <= 0){hg = 0;}
   if(st <= 0){st = 0;}
   if(hp <= 0){hp = 0;}
-
+  
 }
 
 //Time for hunger & hp integration
@@ -59,11 +57,10 @@ function timePlay() {
     gameOver();
   }
 }
-
+//gameOver
 function gameOver(){
   console.log("Game Over");
   $("#gameover").css("display","block");
-  alert("inallilahi");
-  
+  setInterval(function(){location.reload(true);}, 7000);
 
 }

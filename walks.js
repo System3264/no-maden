@@ -36,15 +36,11 @@ $(document).keydown(function(e) {
     }
     //pick item
     switch(e.keyCode) {
-      case 32: setInterval(pickItem(), 200);
+      case 32: setInterval(pickItem(), 200);//pick item (still bugging)
       break;
     }
      switch(e.keyCode) {
-      case 90: setInterval(storeitem(), 200);
-      break;
-    }
-      switch(e.keyCode) {
-      case 88: setInterval(takeoutitem(), 200);
+      case 90: setInterval(storeitem(), 200);//store item
       break;
     }
   }
@@ -583,9 +579,4 @@ if(st <= 0){
 if(st >0){
   charSpeed=370;
 }
-}
-function itemSpawn(){
-  if(Time % 7 == 0){
-    $("#map"+currentRoom+"").append($('div class="item '+item+'"'))
-  }
 }

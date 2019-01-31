@@ -157,7 +157,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	background: url(map/gameover.png);
+	background: url(map/modar.png);
 	display: none;
 	overflow: hidden;
 	z-index : 900;
@@ -589,12 +589,12 @@
 	  left: 450px;
 	  width: 60px;
 	  height: 60px;
-	  background: url('monster/monster.png') no-repeat;
+	  background: url('monster/boo.gif') no-repeat;
 	  z-index: 300;
 }
 
 div.monster{
-	background: url(monster/monster.png);
+	background: url(monster/bootrig.gif) no-repeat;
 	width: 60px;
 	height: 60px;
 	z-index: 400;
@@ -612,7 +612,7 @@ div.monster{
 	left: 79px;
 	top: 230px;
 }
-
+/*dummy*/
 .storage{
 	background: url(feature/storage.png);
 		position: absolute;
@@ -620,6 +620,15 @@ div.monster{
 	  left: 400px;
 	  width: 100px;
 	  height: 100px;
+}
+.tend{
+	background: url(feature/tend.png);
+	position: absolute;
+	color: white;
+	top: 76px;
+	left: 627px;
+	width: 108px;
+	height: : 175px;
 }
 
 
